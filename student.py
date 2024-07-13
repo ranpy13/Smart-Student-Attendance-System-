@@ -344,7 +344,7 @@ class Student:
             # here, parent=self.root shows the message explicitly in that window
         else:
             try:
-                    conn=mysql.connector.connect(host="localhost",username="root",password="1234",database="face_recognizer")
+                    conn=mysql.connector.connect(host="localhost",user="root",password="1234",database="face_recognizer")
                     my_cursor=conn.cursor()
                     my_cursor.execute("insert into student1 values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",(
 
