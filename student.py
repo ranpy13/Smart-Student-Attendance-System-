@@ -346,26 +346,7 @@ class Student:
             try:
                     conn=mysql.connector.connect(host="localhost",user="root",password="1234",database="face_recognizer")
                     my_cursor=conn.cursor()
-                    my_cursor.execute("insert into student1 values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",(
-
-                                                                                                                            self.var_dep.get(),
-                                                                                                                            self.var_course.get(),
-                                                                                                                            self.var_year.get(),
-                                                                                                                            self.var_semester.get(),
-                                                                                                                            self.var_std_id.get(),
-                                                                                                                            self.var_std_name.get(),
-                                                                                                                            self.var_div.get(),
-                                                                                                                            self.var_roll.get(),
-                                                                                                                            self.var_gender.get(),
-
-
-                                                                                                                            self.var_phone.get(),
-                                                                                                                            self.var_address.get(),
-                                                                                                                            self.var_teacher.get(),
-                                                                                                                            self.var_radio1.get()
-
-
-                                                                                                                         ))
+                    my_cursor.execute("insert into student1 values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",())
                     conn.commit()
                     conn.close()
                     messagebox.show("success")
