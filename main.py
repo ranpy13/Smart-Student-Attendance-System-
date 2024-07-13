@@ -11,7 +11,7 @@ class Face_Recognition_System:
 
         # first image
         img1 = Image.open("ProjectImages_FRS/Awesome 4K Skyline Wallpapers - WallpaperAccess.jpg")
-        img1 = img1.resize((450, 120), Image.ANTIALIAS)
+        img1 = img1.resize((450, 120), Image.LANCZOS)
         self.photoimg1 = ImageTk.PhotoImage(img1)
 
         f_lbl = Label(self.root, image=self.photoimg1)
@@ -19,7 +19,7 @@ class Face_Recognition_System:
 
          # second image
         img2 = Image.open("C:/Users/ishru/PycharmProjects/Project1/ProjectImages_FRS/nitap1.jpeg")
-        img2 = img2.resize((450, 120), Image.ANTIALIAS)
+        img2 = img2.resize((450, 120), Image.LANCZOS)
         self.photoimg2 = ImageTk.PhotoImage(img2)
 
         f_lbl = Label(self.root, image=self.photoimg2)
@@ -27,7 +27,7 @@ class Face_Recognition_System:
 
          # # third image
         img3 = Image.open("C:\\Users\\ishru\\PycharmProjects\\Project1\\ProjectImages_FRS\\nitap2.jpeg")
-        img3 = img3.resize((450, 120), Image.ANTIALIAS)
+        img3 = img3.resize((450, 120), Image.LANCZOS)
         self.photoimg3 = ImageTk.PhotoImage(img3)
 
         f_lbl = Label(self.root, image=self.photoimg3)
@@ -36,8 +36,8 @@ class Face_Recognition_System:
         # background image
         img4 = Image.open("C:\\Users\\ishru\\PycharmProjects\\Project1\\ProjectImages_FRS\\NITAPbackground.jpg")
         #img4 = Image.open("Images/ai-shutterstock.jpg")
-        #img4 = img4.resize((1350, 580), Image.ANTIALIAS)
-        img4 = img4.resize((1350, 580), Image.ANTIALIAS)
+        #img4 = img4.resize((1350, 580), Image.LANCZOS)
+        img4 = img4.resize((1350, 580), Image.LANCZOS)
         self.photoimg4 = ImageTk.PhotoImage(img4)
 
         bg_img = Label(self.root, image=self.photoimg4)
@@ -49,7 +49,7 @@ class Face_Recognition_System:
 
         #Student botton
         img5 = Image.open("C:\\Users\\ishru\\PycharmProjects\\Project1\\ProjectImages_FRS\\motu.jpeg")
-        img5 = img5.resize((195, 195), Image.ANTIALIAS)
+        img5 = img5.resize((195, 195), Image.LANCZOS)
         self.photoimg5 = ImageTk.PhotoImage(img5)
 
         btn1 = Button(bg_img, image=self.photoimg5, cursor="hand2")
@@ -62,7 +62,7 @@ class Face_Recognition_System:
 
            # Face Detection button
         img6 = Image.open("C:\\Users\\ishru\\PycharmProjects\\Project1\\ProjectImages_FRS\\faceDetector.jpeg")
-        img6 = img6.resize((195, 195), Image.ANTIALIAS)
+        img6 = img6.resize((195, 195), Image.LANCZOS)
         self.photoimg6 = ImageTk.PhotoImage(img6)
 
         btn2 = Button(bg_img, image=self.photoimg6, cursor="hand2")
@@ -75,7 +75,7 @@ class Face_Recognition_System:
 
         # attendance button
         img7 = Image.open("C:\\Users\\ishru\\PycharmProjects\\Project1\\ProjectImages_FRS\\face.jpg")
-        img7 = img7.resize((195, 195), Image.ANTIALIAS)
+        img7 = img7.resize((195, 195), Image.LANCZOS)
         self.photoimg7 = ImageTk.PhotoImage(img7)
 
         btn3 = Button(bg_img, image=self.photoimg7, cursor="hand2")
@@ -86,7 +86,7 @@ class Face_Recognition_System:
 
         # Help Desk button
         img8 = Image.open("C:\\Users\\ishru\\PycharmProjects\\Project1\\ProjectImages_FRS\\helpdesk.png")
-        img8 = img8.resize((195, 195), Image.ANTIALIAS)
+        img8 = img8.resize((195, 195), Image.LANCZOS)
         self.photoimg8 = ImageTk.PhotoImage(img8)
 
 
@@ -99,7 +99,7 @@ class Face_Recognition_System:
 
         # train data button
         img9 = Image.open("C:\\Users\\ishru\\PycharmProjects\\Project1\\ProjectImages_FRS\\trainFace-khom.png")
-        img9 = img9.resize((195, 195), Image.ANTIALIAS)
+        img9 = img9.resize((195, 195), Image.LANCZOS)
         self.photoimg9 = ImageTk.PhotoImage(img9)
 
         btn5 = Button(bg_img, image=self.photoimg9, cursor="hand2")
@@ -111,7 +111,7 @@ class Face_Recognition_System:
 
 #         # Photos button
         img10 = Image.open("C:\\Users\\ishru\\PycharmProjects\\Project1\\ProjectImages_FRS\\photos.jpg")
-        img10 = img10.resize((195, 195), Image.ANTIALIAS)
+        img10 = img10.resize((195, 195), Image.LANCZOS)
         self.photoimg10 = ImageTk.PhotoImage(img10)
 
         btn6 = Button(bg_img, image=self.photoimg10, cursor="hand2")
@@ -123,7 +123,7 @@ class Face_Recognition_System:
 
 #         # Developer button
         img11 = Image.open("C:\\Users\\ishru\\PycharmProjects\\Project1\\ProjectImages_FRS\\eye.jpg")
-        img11 = img11.resize((195, 195), Image.ANTIALIAS)
+        img11 = img11.resize((195, 195), Image.LANCZOS)
         self.photoimg11 = ImageTk.PhotoImage(img11)
 
         btn7 = Button(bg_img, image=self.photoimg11, cursor="hand2")
@@ -135,7 +135,7 @@ class Face_Recognition_System:
 
 #         # Exit button
         img12 = Image.open("C:\\Users\\ishru\\PycharmProjects\\Project1\\ProjectImages_FRS\\exit-sign-neon-style_77399-144.jpg")
-        img12 = img12.resize((195, 195), Image.ANTIALIAS)
+        img12 = img12.resize((195, 195), Image.LANCZOS)
         self.photoimg12 = ImageTk.PhotoImage(img12)
 
         btn8 = Button(bg_img, image=self.photoimg12, cursor="hand2")
