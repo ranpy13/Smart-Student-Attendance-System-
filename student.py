@@ -3,6 +3,7 @@ from tkinter import ttk
 from PIL import Image, ImageTk
 from tkinter import messagebox
 import mysql.connector
+import os
 
 class Student:
 
@@ -33,33 +34,35 @@ class Student:
         self.var_searchtxt=StringVar()
         self.var_search=StringVar()
 
+        basedir = os.path.dirname(__file__)
+
         # first image
-        img1 = Image.open("C:\\Users\\ishru\\PycharmProjects\\Project1\\ProjectImages_FRS\\NITAPbuilding2.jpg")
-        img1 = img1.resize((450, 120), Image.ANTIALIAS)
+        img1 = Image.open(os.path.join(basedir, "./ProjectImages_FRS/NITAPbuilding2.jpg"))
+        img1 = img1.resize((450, 120), Image.LANCZOS)
         self.photoimg1 = ImageTk.PhotoImage(img1)
 
         f_lbl = Label(self.root, image=self.photoimg1)
         f_lbl.place(x=0, y=0, width=450, height=120)
 
         # second image
-        img2 = Image.open("C:\\Users\\ishru\\PycharmProjects\\Project1\\ProjectImages_FRS\\NITAPbuilding.jpg")
-        img2 = img2.resize((450, 120), Image.ANTIALIAS)
+        img2 = Image.open(os.path.join(basedir, "./ProjectImages_FRS/NITAPbuilding.jpg"))
+        img2 = img2.resize((450, 120), Image.LANCZOS)
         self.photoimg2 = ImageTk.PhotoImage(img2)
 
         f_lbl = Label(self.root, image=self.photoimg2)
         f_lbl.place(x=450, y=0, width=450, height=120)
 
         # # third image
-        img3 = Image.open("C:\\Users\\ishru\\PycharmProjects\\Project1\\ProjectImages_FRS\\nitap2.jpeg")
-        img3 = img3.resize((450, 120), Image.ANTIALIAS)
+        img3 = Image.open(os.path.join(basedir, "./ProjectImages_FRS/nitap2.jpeg"))
+        img3 = img3.resize((450, 120), Image.LANCZOS)
         self.photoimg3 = ImageTk.PhotoImage(img3)
 
         f_lbl = Label(self.root, image=self.photoimg3)
         f_lbl.place(x=900, y=0, width=450, height=120)
 
         #         # background image
-        img4 = Image.open("C:\\Users\\ishru\\PycharmProjects\\Project1\\ProjectImages_FRS\\face-recognition-logo.jpeg")
-        img4 = img4.resize((1350, 580), Image.ANTIALIAS)
+        img4 = Image.open(os.path.join(basedir, "./ProjectImages_FRS/face-recognition-logo.jpeg"))
+        img4 = img4.resize((1350, 580), Image.LANCZOS)
         self.photoimg4 = ImageTk.PhotoImage(img4)
 
         bg_img = Label(self.root, image=self.photoimg4)
@@ -77,8 +80,8 @@ class Student:
                                 font=("Calibri", 12, "bold"))
         Left_frame.place(x=10, y=10, width=650, height=500)
 
-        img_left = Image.open("C:\\Users\\ishru\\PycharmProjects\\Project1\\ProjectImages_FRS\\student.jpg")
-        img_left = img_left.resize((650, 80), Image.ANTIALIAS)
+        img_left = Image.open(os.path.join(basedir, "./ProjectImages_FRS/student.jpg"))
+        img_left = img_left.resize((650, 80), Image.LANCZOS)
         self.photoimg_left = ImageTk.PhotoImage(img_left)
 
         f_lbl = Label(Left_frame, image=self.photoimg_left)
@@ -252,8 +255,8 @@ class Student:
         Right_frame = LabelFrame(main_frame, bd=2, relief=RIDGE, text="Student Details", font=("Calibri", 12, "bold"))
         Right_frame.place(x=670, y=10, width=650, height=500)
 
-        img_right = Image.open("C:\\Users\\ishru\\PycharmProjects\\Project1\\ProjectImages_FRS\\nitap3.jpg")
-        img_right = img_right.resize((650, 80), Image.ANTIALIAS)
+        img_right = Image.open(os.path.join(basedir, "./ProjectImages_FRS/nitap3.jpg"))
+        img_right = img_right.resize((650, 80), Image.LANCZOS)
         self.photoimg_right = ImageTk.PhotoImage(img_right)
 
         f_lbl = Label(Right_frame, image=self.photoimg_right)
@@ -341,28 +344,9 @@ class Student:
             # here, parent=self.root shows the message explicitly in that window
         else:
             try:
-                    conn=mysql.connector.connect(host="localhost",username="root",password="1234",database="face_recognizer")
+                    conn=mysql.connector.connect(host="localhost",user="root",password="1234",database="face_recognizer")
                     my_cursor=conn.cursor()
-                    my_cursor.execute("insert into student1 values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",(
-
-                                                                                                                            self.var_dep.get(),
-                                                                                                                            self.var_course.get(),
-                                                                                                                            self.var_year.get(),
-                                                                                                                            self.var_semester.get(),
-                                                                                                                            self.var_std_id.get(),
-                                                                                                                            self.var_std_name.get(),
-                                                                                                                            self.var_div.get(),
-                                                                                                                            self.var_roll.get(),
-                                                                                                                            self.var_gender.get(),
-
-
-                                                                                                                            self.var_phone.get(),
-                                                                                                                            self.var_address.get(),
-                                                                                                                            self.var_teacher.get(),
-                                                                                                                            self.var_radio1.get()
-
-
-                                                                                                                         ))
+                    my_cursor.execute("insert into student1 values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",())
                     conn.commit()
                     conn.close()
                     messagebox.show("success")
