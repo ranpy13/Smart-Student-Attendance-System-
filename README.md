@@ -11,7 +11,7 @@ This project is a Python-based machine learning application for a smart student 
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/ishrutimishra/Smart-Student-Attendance-System.git
+   git clone https://github.com/ishrutimishra/Smart-Student-Attendance-System-.git
    ```
 2. Install the required dependencies:
    ```bash
